@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0D61BF582EB96C4A00420160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D61BF3E2EB96C4700420160 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D61BF452EB96C4700420160;
+			remoteInfo = "Mama-Care";
+		};
+		0D61BF622EB96C4A00420160 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D61BF3E2EB96C4700420160 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D61BF452EB96C4700420160;
+			remoteInfo = "Mama-Care";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D61BF462EB96C4700420160 /* Mama-Care.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mama-Care.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D61BF572EB96C4A00420160 /* Mama-CareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mama-CareTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D61BF612EB96C4A00420160 /* Mama-CareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mama-CareUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0D61BF692EB96C4A00420160 /* Exceptions for "Mama-Care" folder in "Mama-Care" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0D61BF452EB96C4700420160 /* Mama-Care */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0D61BF482EB96C4700420160 /* Mama-Care */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0D61BF692EB96C4A00420160 /* Exceptions for "Mama-Care" folder in "Mama-Care" target */,
+			);
+			path = "Mama-Care";
+			sourceTree = "<group>";
+		};
+		0D61BF5A2EB96C4A00420160 /* Mama-CareTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mama-CareTests";
+			sourceTree = "<group>";
+		};
+		0D61BF642EB96C4A00420160 /* Mama-CareUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Mama-CareUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D61BF432EB96C4700420160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D61BF542EB96C4A00420160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D61BF5E2EB96C4A00420160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D61BF3D2EB96C4700420160 = {
+			isa = PBXGroup;
+			children = (
+				0D61BF482EB96C4700420160 /* Mama-Care */,
+				0D61BF5A2EB96C4A00420160 /* Mama-CareTests */,
+				0D61BF642EB96C4A00420160 /* Mama-CareUITests */,
+				0D61BF472EB96C4700420160 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0D61BF472EB96C4700420160 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D61BF462EB96C4700420160 /* Mama-Care.app */,
+				0D61BF572EB96C4A00420160 /* Mama-CareTests.xctest */,
+				0D61BF612EB96C4A00420160 /* Mama-CareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D61BF452EB96C4700420160 /* Mama-Care */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D61BF6A2EB96C4A00420160 /* Build configuration list for PBXNativeTarget "Mama-Care" */;
+			buildPhases = (
+				0D61BF422EB96C4700420160 /* Sources */,
+				0D61BF432EB96C4700420160 /* Frameworks */,
+				0D61BF442EB96C4700420160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0D61BF482EB96C4700420160 /* Mama-Care */,
+			);
+			name = "Mama-Care";
+			packageProductDependencies = (
+			);
+			productName = "Mama-Care";
+			productReference = 0D61BF462EB96C4700420160 /* Mama-Care.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0D61BF562EB96C4A00420160 /* Mama-CareTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D61BF6F2EB96C4A00420160 /* Build configuration list for PBXNativeTarget "Mama-CareTests" */;
+			buildPhases = (
+				0D61BF532EB96C4A00420160 /* Sources */,
+				0D61BF542EB96C4A00420160 /* Frameworks */,
+				0D61BF552EB96C4A00420160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D61BF592EB96C4A00420160 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0D61BF5A2EB96C4A00420160 /* Mama-CareTests */,
+			);
+			name = "Mama-CareTests";
+			packageProductDependencies = (
+			);
+			productName = "Mama-CareTests";
+			productReference = 0D61BF572EB96C4A00420160 /* Mama-CareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0D61BF602EB96C4A00420160 /* Mama-CareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D61BF722EB96C4A00420160 /* Build configuration list for PBXNativeTarget "Mama-CareUITests" */;
+			buildPhases = (
+				0D61BF5D2EB96C4A00420160 /* Sources */,
+				0D61BF5E2EB96C4A00420160 /* Frameworks */,
+				0D61BF5F2EB96C4A00420160 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D61BF632EB96C4A00420160 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0D61BF642EB96C4A00420160 /* Mama-CareUITests */,
+			);
+			name = "Mama-CareUITests";
+			packageProductDependencies = (
+			);
+			productName = "Mama-CareUITests";
+			productReference = 0D61BF612EB96C4A00420160 /* Mama-CareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D61BF3E2EB96C4700420160 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					0D61BF452EB96C4700420160 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					0D61BF562EB96C4A00420160 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 0D61BF452EB96C4700420160;
+					};
+					0D61BF602EB96C4A00420160 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 0D61BF452EB96C4700420160;
+					};
+				};
+			};
+			buildConfigurationList = 0D61BF412EB96C4700420160 /* Build configuration list for PBXProject "Mama-Care" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0D61BF3D2EB96C4700420160;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0D61BF472EB96C4700420160 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D61BF452EB96C4700420160 /* Mama-Care */,
+				0D61BF562EB96C4A00420160 /* Mama-CareTests */,
+				0D61BF602EB96C4A00420160 /* Mama-CareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D61BF442EB96C4700420160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D61BF552EB96C4A00420160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D61BF5F2EB96C4A00420160 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D61BF422EB96C4700420160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D61BF532EB96C4A00420160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D61BF5D2EB96C4A00420160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D61BF592EB96C4A00420160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D61BF452EB96C4700420160 /* Mama-Care */;
+			targetProxy = 0D61BF582EB96C4A00420160 /* PBXContainerItemProxy */;
+		};
+		0D61BF632EB96C4A00420160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D61BF452EB96C4700420160 /* Mama-Care */;
+			targetProxy = 0D61BF622EB96C4A00420160 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D61BF6B2EB96C4A00420160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mama-Care/Mama_Care.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDWR464A44;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mama-Care/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Elizabeth.Mama-Care";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0D61BF6C2EB96C4A00420160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mama-Care/Mama_Care.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDWR464A44;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Mama-Care/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Elizabeth.Mama-Care";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0D61BF6D2EB96C4A00420160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NDWR464A44;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0D61BF6E2EB96C4A00420160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = NDWR464A44;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D61BF702EB96C4A00420160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDWR464A44;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Elizabeth.Mama-CareTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mama-Care.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mama-Care";
+			};
+			name = Debug;
+		};
+		0D61BF712EB96C4A00420160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDWR464A44;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Elizabeth.Mama-CareTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mama-Care.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mama-Care";
+			};
+			name = Release;
+		};
+		0D61BF732EB96C4A00420160 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDWR464A44;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Elizabeth.Mama-CareUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mama-Care";
+			};
+			name = Debug;
+		};
+		0D61BF742EB96C4A00420160 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NDWR464A44;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Elizabeth.Mama-CareUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mama-Care";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D61BF412EB96C4700420160 /* Build configuration list for PBXProject "Mama-Care" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D61BF6D2EB96C4A00420160 /* Debug */,
+				0D61BF6E2EB96C4A00420160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D61BF6A2EB96C4A00420160 /* Build configuration list for PBXNativeTarget "Mama-Care" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D61BF6B2EB96C4A00420160 /* Debug */,
+				0D61BF6C2EB96C4A00420160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D61BF6F2EB96C4A00420160 /* Build configuration list for PBXNativeTarget "Mama-CareTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D61BF702EB96C4A00420160 /* Debug */,
+				0D61BF712EB96C4A00420160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D61BF722EB96C4A00420160 /* Build configuration list for PBXNativeTarget "Mama-CareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D61BF732EB96C4A00420160 /* Debug */,
+				0D61BF742EB96C4A00420160 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D61BF3E2EB96C4700420160 /* Project object */;
+}
