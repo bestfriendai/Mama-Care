@@ -102,6 +102,22 @@ enum MoodType: String, CaseIterable, Codable {
     case good = "Good"
     case okay = "Okay"
     case notGood = "Not Good"
+    
+    var chartValue: Int {
+        switch self {
+        case .good: return 3
+        case .okay: return 2
+        case .notGood: return 1
+        }
+    }
+    
+    var color: Color {
+        switch self {
+        case .good: return .green
+        case .okay: return .yellow
+        case .notGood: return .red
+        }
+    }
 }
 
 struct Vaccine: Identifiable, Codable {

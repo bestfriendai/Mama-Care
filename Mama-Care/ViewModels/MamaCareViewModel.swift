@@ -124,14 +124,14 @@ class MamaCareViewModel: ObservableObject {
         }
 
         func logout() {
-            isLoggedIn = false
-            currentUser = nil
-            hasCompletedOnboarding = false
-            UserDefaults.standard.set(false, forKey: "isLoggedIn")
-            UserDefaults.standard.set(false, forKey: "hasCompletedOnboarding")
-            UserDefaults.standard.removeObject(forKey: "currentUser")  // Clear saved user data
-            print("✅ User logged out successfully")
-        }
+        isLoggedIn = false
+        // currentUser = nil // Keep user data for re-login
+        // hasCompletedOnboarding = false // Keep onboarding status
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        // UserDefaults.standard.set(false, forKey: "hasCompletedOnboarding") // Keep onboarding status
+        // UserDefaults.standard.removeObject(forKey: "currentUser")  // Keep saved user data
+        print("✅ User logged out successfully (data persisted)")
+    }
 
         // MARK: - Helpers
 

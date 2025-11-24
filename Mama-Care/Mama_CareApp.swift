@@ -6,75 +6,17 @@
 //
 
 import SwiftUI
-//
-//@main
-//struct MamaCareApp: App {
-//    @StateObject private var viewModel = MamaCareViewModel()
-//    
-//    var body: some Scene {
-//        WindowGroup {
-//            Group {
-//                if viewModel.isLoggedIn {
-//                    if viewModel.hasCompletedOnboarding {
-//                        MainTabView()
-//                            .environmentObject(viewModel)
-//                    } else {
-//                        OnboardingFlowView()
-//                            .environmentObject(viewModel)
-//                    }
-//                } else {
-//                    AuthLandingView()
-//                        .environmentObject(viewModel)
-//                }
-//            }
-//        }
-//    }
-//}
-
-
-
-//import SwiftUI
-//
-//@main
-//struct MamaCareApp: App {
-//    @StateObject private var viewModel = MamaCareViewModel()
-//    @State private var showSplash = true
-//
-//    var body: some Scene {
-//        WindowGroup {
-//            if showSplash {
-//                SplashScreenView {
-//                    // Called after splash finishes
-//                    showSplash = false
-//                }
-//            } else {
-//                Group {
-//                    if viewModel.isLoggedIn {
-//                        if viewModel.currentUser?.needsOnboarding ?? true {
-//                            MainTabView()
-//                                .environmentObject(viewModel)
-//                        } else {
-//                            MainTabView()
-//                                .environmentObject(viewModel)
-//                        }
-//                    } else {
-//                        AuthLandingView()
-//                            .environmentObject(viewModel)
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
-
-
-import SwiftUI
+import FirebaseCore
 
 @main
 struct MamaCareApp: App {
     @StateObject private var viewModel = MamaCareViewModel()
     @StateObject private var onboardingVM = OnboardingViewModel()   // ✅ Add this
     @State private var showSplash = true
+
+    init() {
+        FirebaseApp.configure()
+    }
 
     var body: some Scene {
         WindowGroup {

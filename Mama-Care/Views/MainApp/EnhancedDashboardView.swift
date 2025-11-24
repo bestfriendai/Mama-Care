@@ -28,6 +28,9 @@ struct EnhancedDashboardView: View {
                         // Quick Actions
                         quickActionsSection
                         
+                        // Mood Trend Chart
+                        moodTrendSection
+                        
                         // Postpartum Tips (Optional, keeping as per previous code but maybe simplified)
                         // postpartumTipsSection
                         
@@ -201,6 +204,10 @@ struct EnhancedDashboardView: View {
             }
             .padding(.horizontal)
         }
+    }
+    
+    private var moodTrendSection: some View {
+        MoodTrendChartView(moodCheckIns: viewModel.moodCheckIns)
     }
 }
 

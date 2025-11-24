@@ -14,6 +14,10 @@ struct SignInView: View {
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
     @State private var rememberMe: Bool = false
+    @State private var showError: Bool = false
+    @State private var errorMessage: String = ""
+    
+    @EnvironmentObject var viewModel: MamaCareViewModel
     
     var body: some View {
         NavigationStack {
@@ -102,12 +106,15 @@ struct SignInView: View {
                         
                         // Log In Button
                         Button(action: {
-                            // Add login action
+                            handleLogin()
                         }) {
                             Text("Log In")
                                 .frame(maxWidth: .infinity)
                         }
                         .buttonStyle(PrimaryButtonStyle())
+                        .alert(isPresented: $showError) {
+                            Alert(title: Text("Login Failed"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+                        }
                         
                         // Divider
                         HStack {
@@ -154,6 +161,31 @@ struct SignInView: View {
                 }
             }
             .buttonStyle(PlainButtonStyle())
+        }
+    }
+
+    
+    // MARK: - Login Logic
+    private func handleLogin() {
+        // Basic validation
+        guard !email.isEmpty else {
+            errorMessage = "Please enter your email address."
+            showError = true
+            return
+        }
+        
+        // Check if user exists and has completed onboarding
+        if viewModel.hasCompletedOnboarding, let user = viewModel.currentUser {
+            // Verify email (case-insensitive)
+            if user.email.lowercased() == email.lowercased() {
+                viewModel.login()
+            } else {
+                errorMessage = "Invalid credentials or no account found."
+                showError = true
+            }
+        } else {
+            errorMessage = "No account found. Please sign up."
+            showError = true
         }
     }
 }
