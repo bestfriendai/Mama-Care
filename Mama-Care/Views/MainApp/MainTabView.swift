@@ -62,12 +62,19 @@ struct MainTabView: View {
                 }
                 .tag(5)
             
+            MoreFeaturesView()
+                .tabItem {
+                    Image(systemName: "ellipsis.circle.fill")
+                    Text("More")
+                }
+                .tag(6)
+            
             SettingsView()
                 .tabItem {
                     Image(systemName: "gearshape.fill")
                     Text("Settings")
                 }
-                .tag(6)
+                .tag(7)
         }
         .accentColor(.purple)
     }

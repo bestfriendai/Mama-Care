@@ -47,7 +47,19 @@ struct MamaCareApp: App {
                 }
             }
         }
-        .modelContainer(for: [UserProfile.self, MoodEntry.self, Contact.self])
+        .modelContainer(for: [
+            UserProfile.self,
+            MoodEntry.self,
+            Contact.self,
+            KickCountSession.self,
+            Contraction.self,
+            WeightEntry.self,
+            SymptomEntry.self,
+            HospitalBagItem.self,
+            Appointment.self,
+            MemoryEntry.self,
+            WaterIntakeEntry.self
+        ])
     }
 }
 
