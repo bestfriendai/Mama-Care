@@ -53,6 +53,11 @@ struct User: Identifiable, Codable {
         (userType == .pregnant && expectedDeliveryDate == nil) ||
         (userType == .hasChild && birthDate == nil)
     }
+    
+    // Convert to UserProfile for SwiftData
+    func toUserProfile() -> UserProfile? {
+        return UserProfile.from(self)
+    }
 }
 
 enum UserType: String, CaseIterable, Codable {
