@@ -485,6 +485,12 @@ struct AddSymptomEntryView: View {
 
 // MARK: - Water Intake Tracker
 
+// Water intake configuration
+private struct WaterIntakeConfig {
+    static let dailyGoalMl: Double = 2000 // 2 liters - recommended for pregnancy
+    // Note: This can be made user-configurable in future versions
+}
+
 struct WaterIntakeView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject var viewModel: MamaCareViewModel
@@ -502,7 +508,9 @@ struct WaterIntakeView: View {
         todayEntries.reduce(0) { $0 + $1.amountInMl }
     }
     
-    private let dailyGoalMl: Double = 2000 // 2 liters
+    private var dailyGoalMl: Double {
+        WaterIntakeConfig.dailyGoalMl
+    }
     
     private var progress: Double {
         min(todayTotal / dailyGoalMl, 1.0)

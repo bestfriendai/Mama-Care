@@ -8,6 +8,23 @@
 import SwiftUI
 import SwiftData
 
+// MARK: - 5-1-1 Rule Constants
+// Medical guideline: Call healthcare provider when contractions are 5 minutes apart,
+// lasting 1 minute or longer, for at least 1 hour
+private struct ContractionRuleConstants {
+    static let intervalThresholdMinutes: Double = 5
+    static let durationThresholdSeconds: Double = 60
+    static let minimumContractionCount: Int = 12 // 1 hour worth at 5 min intervals
+    
+    static var intervalThreshold: TimeInterval {
+        intervalThresholdMinutes * 60
+    }
+    
+    static var durationThreshold: TimeInterval {
+        durationThresholdSeconds
+    }
+}
+
 struct ContractionTimerView: View {
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject var viewModel: MamaCareViewModel
@@ -46,14 +63,14 @@ struct ContractionTimerView: View {
     }
     
     private var shouldGoToHospital: Bool {
-        // 5-1-1 rule: Contractions 5 minutes apart, lasting 1 minute, for 1 hour
         guard let avgInterval = averageInterval,
               let avgDuration = averageDuration,
-              recentContractions.count >= 12 else { // At least 12 contractions (1 hour worth)
+              recentContractions.count >= ContractionRuleConstants.minimumContractionCount else {
             return false
         }
         
-        return avgInterval <= 5 * 60 && avgDuration >= 60
+        return avgInterval <= ContractionRuleConstants.intervalThreshold &&
+               avgDuration >= ContractionRuleConstants.durationThreshold
     }
     
     private var formattedTime: String {

@@ -7,6 +7,46 @@
 
 import SwiftUI
 
+// Fruit emoji mapping for baby size comparisons
+private let fruitEmojiMap: [String: String] = [
+    "Poppy seed": "🌱",
+    "Sesame seed": "🌱",
+    "Lentil": "🫘",
+    "Blueberry": "🫐",
+    "Kidney bean": "🫘",
+    "Grape": "🍇",
+    "Kumquat": "🍊",
+    "Fig": "🫒",
+    "Lime": "🍋",
+    "Pea pod": "🫛",
+    "Lemon": "🍋",
+    "Apple": "🍎",
+    "Avocado": "🥑",
+    "Turnip": "🥕",
+    "Bell pepper": "🫑",
+    "Mango": "🥭",
+    "Banana": "🍌",
+    "Carrot": "🥕",
+    "Papaya": "🥭",
+    "Grapefruit": "🍊",
+    "Cantaloupe": "🍈",
+    "Cauliflower": "🥦",
+    "Lettuce": "🥬",
+    "Cabbage": "🥬",
+    "Eggplant": "🍆",
+    "Butternut squash": "🎃",
+    "Cucumber": "🥒",
+    "Coconut": "🥥",
+    "Jicama": "🥔",
+    "Pineapple": "🍍",
+    "Honeydew melon": "🍈",
+    "Romaine lettuce": "🥬",
+    "Swiss chard": "🥬",
+    "Leek": "🥬",
+    "Mini watermelon": "🍉",
+    "Small pumpkin": "🎃"
+]
+
 struct BabySizeView: View {
     @EnvironmentObject var viewModel: MamaCareViewModel
     
@@ -37,7 +77,7 @@ struct BabySizeView: View {
                         // Size Comparison Card
                         VStack(spacing: 20) {
                             // Fruit emoji/icon
-                            Text(fruitEmoji(for: size.fruitComparison))
+                            Text(fruitEmojiMap[size.fruitComparison] ?? "👶")
                                 .font(.system(size: 100))
                             
                             Text("Your baby is about the size of a")
@@ -87,49 +127,6 @@ struct BabySizeView: View {
             .navigationTitle("Baby's Size")
             .navigationBarTitleDisplayMode(.large)
         }
-    }
-    
-    private func fruitEmoji(for fruit: String) -> String {
-        let emojiMap: [String: String] = [
-            "Poppy seed": "🌱",
-            "Sesame seed": "🌱",
-            "Lentil": "🫘",
-            "Blueberry": "🫐",
-            "Kidney bean": "🫘",
-            "Grape": "🍇",
-            "Kumquat": "🍊",
-            "Fig": "🫒",
-            "Lime": "🍋",
-            "Pea pod": "🫛",
-            "Lemon": "🍋",
-            "Apple": "🍎",
-            "Avocado": "🥑",
-            "Turnip": "🥕",
-            "Bell pepper": "🫑",
-            "Mango": "🥭",
-            "Banana": "🍌",
-            "Carrot": "🥕",
-            "Papaya": "🥭",
-            "Grapefruit": "🍊",
-            "Cantaloupe": "🍈",
-            "Cauliflower": "🥦",
-            "Lettuce": "🥬",
-            "Cabbage": "🥬",
-            "Eggplant": "🍆",
-            "Butternut squash": "🎃",
-            "Cucumber": "🥒",
-            "Coconut": "🥥",
-            "Jicama": "🥔",
-            "Pineapple": "🍍",
-            "Honeydew melon": "🍈",
-            "Romaine lettuce": "🥬",
-            "Swiss chard": "🥬",
-            "Leek": "🥬",
-            "Mini watermelon": "🍉",
-            "Small pumpkin": "🎃"
-        ]
-        
-        return emojiMap[fruit] ?? "👶"
     }
 }
 

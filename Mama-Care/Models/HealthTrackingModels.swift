@@ -86,6 +86,10 @@ final class Contraction {
 
 // MARK: - Weight Tracking Models
 
+// Weight conversion constants
+private let lbsToKgFactor = 0.453592
+private let kgToLbsFactor = 2.20462
+
 @Model
 final class WeightEntry {
     @Attribute(.unique) var id: UUID
@@ -99,14 +103,14 @@ final class WeightEntry {
     
     var weightInKg: Double {
         if unit == "lbs" {
-            return weight * 0.453592 // Convert lbs to kg
+            return weight * lbsToKgFactor
         }
         return weight
     }
     
     var weightInLbs: Double {
         if unit == "kg" {
-            return weight * 2.20462 // Convert kg to lbs
+            return weight * kgToLbsFactor
         }
         return weight
     }
@@ -430,6 +434,9 @@ final class MemoryEntry {
 
 // MARK: - Water Intake Tracking
 
+// Water volume conversion constants
+private let ozToMlFactor = 29.5735
+
 @Model
 final class WaterIntakeEntry {
     @Attribute(.unique) var id: UUID
@@ -442,14 +449,14 @@ final class WaterIntakeEntry {
     
     var amountInMl: Double {
         if unit == "oz" {
-            return amount * 29.5735 // Convert oz to ml
+            return amount * ozToMlFactor
         }
         return amount
     }
     
     var amountInOz: Double {
         if unit == "ml" {
-            return amount / 29.5735 // Convert ml to oz
+            return amount / ozToMlFactor
         }
         return amount
     }
