@@ -233,15 +233,19 @@ struct StorageCard: View {
 // MARK: - Custom Checkbox Toggle Style
 public struct MamaCheckboxToggleStyle: ToggleStyle {
     public init() {}
-    
+
     public func makeBody(configuration: Configuration) -> some View {
         Button(action: {
-            configuration.isOn.toggle()
+            withAnimation(.easeInOut(duration: 0.15)) {
+                configuration.isOn.toggle()
+            }
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
         }) {
             HStack(alignment: .top, spacing: 8) {
                 Image(systemName: configuration.isOn ? "checkmark.square.fill" : "square")
                     .foregroundColor(configuration.isOn ? Color.mamaCarePrimaryDark : .gray)
                     .font(.system(size: 18))
+                    .scaleEffect(configuration.isOn ? 1.0 : 0.95)
                 configuration.label
             }
         }
