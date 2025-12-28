@@ -11,6 +11,8 @@ struct EnhancedDashboardView: View {
     @EnvironmentObject var viewModel: MamaCareViewModel
     @Binding var selectedTab: Int
 
+    @State private var isRefreshing = false
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -28,9 +30,29 @@ struct EnhancedDashboardView: View {
                     .padding(.bottom, 20)
                 }
             }
+            .refreshable {
+                await refreshData()
+            }
             .ignoresSafeArea(edges: .top)
             .navigationBarHidden(true)
             .background(Color.mamaCareGrayLight)
+        }
+    }
+
+    // MARK: - Refresh Data
+
+    private func refreshData() async {
+        HapticFeedback.light()
+        isRefreshing = true
+
+        // Simulate network delay for data refresh
+        try? await Task.sleep(nanoseconds: 1_000_000_000)
+
+        // Refresh mood data from ViewModel
+        await MainActor.run {
+            viewModel.refreshMoodData()
+            isRefreshing = false
+            HapticFeedback.success()
         }
     }
 
