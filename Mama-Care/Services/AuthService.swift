@@ -130,6 +130,23 @@ final class AuthService: AuthServiceProtocol {
         }
     }
 
+    func deleteAccountPublisher() -> Future<Void, Error> {
+        Future { promise in
+            guard let user = Auth.auth().currentUser else {
+                promise(.failure(AuthError.notAuthenticated))
+                return
+            }
+
+            user.delete { error in
+                if let error = error {
+                    promise(.failure(error))
+                } else {
+                    promise(.success(()))
+                }
+            }
+        }
+    }
+
     // MARK: - Error Mapping
 
     private func mapFirebaseError(_ error: NSError) -> AuthError {
