@@ -12,42 +12,47 @@ import SwiftData
 @main
 struct MamaCareApp: App {
     @StateObject private var viewModel = MamaCareViewModel()
-    @StateObject private var onboardingVM = OnboardingViewModel()   // ✅ Add this
+    @StateObject private var onboardingVM = OnboardingViewModel()
     @State private var showSplash = true
+    @State private var firebaseConfigured = false
 
     init() {
-        FirebaseApp.configure()
+        configureFirebase()
+    }
+
+    private func configureFirebase() {
+        // Firebase configuration with error handling
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
+        firebaseConfigured = true
     }
 
     var body: some Scene {
         WindowGroup {
-            if showSplash {
-                SplashScreenView {
-                    showSplash = false
-                }
-                .environmentObject(viewModel)
-                .environmentObject(onboardingVM)   // ✅ Inject here too
-            } else {
-                Group {
-                    if viewModel.isLoggedIn {
-                        if viewModel.currentUser?.needsOnboarding ?? true {
-                            MainTabView()
-                                .environmentObject(viewModel)
-                                .environmentObject(onboardingVM)   // ✅ Add here
-                        } else {
-                            MainTabView()
-                                .environmentObject(viewModel)
-                                .environmentObject(onboardingVM)   // ✅ Add here
+            Group {
+                if showSplash {
+                    SplashScreenView {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            showSplash = false
                         }
-                    } else {
-                        AuthLandingView()
-                            .environmentObject(viewModel)
-                            .environmentObject(onboardingVM)       // ✅ Add here
                     }
+                } else {
+                    rootView
                 }
             }
+            .environmentObject(viewModel)
+            .environmentObject(onboardingVM)
         }
         .modelContainer(for: [UserProfile.self, MoodEntry.self, Contact.self])
     }
-}
 
+    @ViewBuilder
+    private var rootView: some View {
+        if viewModel.isLoggedIn {
+            MainTabView()
+        } else {
+            AuthLandingView()
+        }
+    }
+}

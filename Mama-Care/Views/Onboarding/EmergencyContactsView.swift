@@ -65,6 +65,7 @@ struct EmergencyContactsView: View {
         onboardingVM.user.emergencyContacts = viewModel.emergencyContacts
         viewModel.completeOnboarding(
             with: onboardingVM.user,
+            password: onboardingVM.password,
             storage: onboardingVM.storageOption,
             wantsReminders: onboardingVM.wantsReminders
         )

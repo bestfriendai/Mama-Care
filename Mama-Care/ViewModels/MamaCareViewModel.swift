@@ -83,7 +83,7 @@ class MamaCareViewModel: ObservableObject {
         if user.storageMode == .cloud {
             guard let uid = authService.currentUser?.uid else { return }
             print("☁️ Saving mood to Cloud...")
-            moodService.addMood(checkIn, userID: uid)
+            moodService.addMoodPublisher(checkIn, userID: uid)
                 .receive(on: DispatchQueue.main)
                 .sink { completion in
                     if case .failure(let error) = completion {
@@ -99,13 +99,18 @@ class MamaCareViewModel: ObservableObject {
         }
     }
     
+    /// Refresh mood data from the appropriate source (used by pull-to-refresh)
+    func refreshMoodData() {
+        fetchMoodCheckIns()
+    }
+
     func fetchMoodCheckIns() {
         guard let user = currentUser else { return }
-        
+
         if user.storageMode == .cloud {
             guard let uid = authService.currentUser?.uid else { return }
             print("☁️ Fetching moods from Cloud...")
-            moodService.fetchMoods(userID: uid)
+            moodService.fetchMoodsPublisher(userID: uid)
                 .receive(on: DispatchQueue.main)
                 .sink { completion in
                     if case .failure(let error) = completion {
@@ -154,39 +159,7 @@ class MamaCareViewModel: ObservableObject {
     func addEmergencyContact(_ contact: EmergencyContact) {
         emergencyContacts.append(contact)
     }
-//    
-//    func updateEmergencyContact(_ updatedContact: EmergencyContact) {
-//        if let index = emergencyContacts.firstIndex(where: { $0.id == updatedContact.id }) {
-//            emergencyContacts[index] = updatedContact
-//        }
-//    }
-//
-//    func deleteEmergencyContact(_ contact: EmergencyContact) {
-//        emergencyContacts.removeAll { $0.id == contact.id }
-//    }
 
-    
-    func completeOnboarding(with user: User, storage: StorageMode?, wantsReminders: Bool) {
-        // Prepare user object
-        var newUser = user
-        newUser.storageMode = storage ?? .deviceOnly
-        newUser.notificationsWanted = wantsReminders
-        newUser.privacyAcceptedAt = Date()
-        
-        // We need a password to create the account. 
-        // NOTE: The current User struct does NOT have a password field.
-        // The OnboardingViewModel has the password.
-        // We need to pass the password to this function or handle it differently.
-        // For now, I will assume the password needs to be passed here.
-        // Since I cannot change the signature easily without breaking calls, 
-        // I will check if I can access it or if I need to update the call site.
-        // The call site in CreateAccountFlowView uses onboardingVM.user, but onboardingVM has the password.
-        
-        // Wait, I need to update the signature of completeOnboarding to accept password.
-        // But first, let's just put a placeholder or fix the call site in the next step.
-        // Actually, I should update the signature now.
-    }
-    
     func completeOnboarding(with user: User, password: String, storage: StorageMode?, wantsReminders: Bool) {
         print("🔄 Starting Onboarding (Hybrid Mode)...")
         
@@ -198,7 +171,7 @@ class MamaCareViewModel: ObservableObject {
         
         // 1. Always create Firebase Account
         print("☁️ Creating Firebase Auth account...")
-        authService.signUp(email: user.email, password: password)
+        authService.signUpPublisher(email: user.email, password: password)
             .flatMap { result -> Future<Void, Error> in
                 print("✅ Firebase Auth successful. UID: \(result.user.uid)")
                 
@@ -329,7 +302,7 @@ class MamaCareViewModel: ObservableObject {
 
         func login(email: String, password: String, completion: @escaping (Result<Void, Error>) -> Void) {
             print("🔄 Attempting login for \(email)")
-            authService.signIn(email: email, password: password)
+            authService.signInPublisher(email: email, password: password)
                 .receive(on: DispatchQueue.main)
                 .sink { result in
                     if case .failure(let error) = result {
@@ -426,7 +399,7 @@ class MamaCareViewModel: ObservableObject {
                         print("✅ Cloud data deleted")
                         // Step 2: Delete Firebase Auth account
                         print("🔐 Deleting Firebase Auth account...")
-                        return self.authService.deleteAccount()
+                        return self.authService.deleteAccountPublisher()
                     }
                     .receive(on: DispatchQueue.main)
                     .sink { result in
@@ -447,7 +420,7 @@ class MamaCareViewModel: ObservableObject {
             } else {
                 // Device-only user: Just delete Firebase Auth and local data
                 print("📱 Device-only user: Deleting auth and local data...")
-                authService.deleteAccount()
+                authService.deleteAccountPublisher()
                     .receive(on: DispatchQueue.main)
                     .sink { result in
                         switch result {
